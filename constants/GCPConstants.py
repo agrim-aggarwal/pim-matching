@@ -1,0 +1,8 @@
+ENV='prod'
+EF_ENV='data'
+SECRET_KEY=f'gcp/identity-federation/sagemaker-pim-{ENV}'
+MATCHING_FILE_BUCKET=f'ef-pim-matching-input-{ENV}'
+FEATURE_FILE_BUCKET=f'ef-pim-matching-feature-preference-config-{ENV}'
+BILLING_PROJECT=f'dsa-ds-dso-pim-dh-{ENV}'
+PRO_PROJECT=f'ef-data-processing-{ENV}'
+EF_PROJECT=f'efundamentals-{EF_ENV}'
