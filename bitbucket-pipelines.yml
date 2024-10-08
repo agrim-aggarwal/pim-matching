@@ -1,0 +1,36 @@
+definitions:
+  services:
+      docker:
+        memory: 7168
+  steps:
+    - step: &buildImage
+        name: Build and Push Docker Image
+        image: atlassian/pipelines-awscli
+        size: 2x
+        aws:
+          oidc-role: arn:aws:iam::208876916689:role/BitbucketPipelinesECRAccessRole
+        oidc: true
+        services:
+          - docker
+        script:
+          - echo "Started image creation"
+pipelines:
+  branches:
+    pre-develop:
+      - step: 
+          <<: *buildImage
+          deployment: test
+          script:  
+            - export AWS_ROLE_ARN=arn:aws:iam::208876916689:role/BitbucketPipelinesECRAccessRole
+            - export AWS_WEB_IDENTITY_TOKEN_FILE=$(pwd)/web-identity-token
+            - echo $BITBUCKET_STEP_OIDC_TOKEN > $(pwd)/web-identity-token
+            - export IMAGE_URI=$IMAGE_REPO:$BITBUCKET_COMMIT
+            - echo "Started image creation"
+            - export IMAGE_URI=208876916689.dkr.ecr.us-west-2.amazonaws.com/pim-matching:v1
+            # Login to AWS ECR
+            - echo $IMAGE_URI
+            - eval $(aws ecr get-login --no-include-email)
+            # Build image
+            - docker build -f Dockerfile -t $IMAGE_URI .
+            # Push image to private registry
+            - docker push $IMAGE_URI            
