@@ -1,0 +1,32 @@
+retailer language code,language,g-code,meta-code,paddle OCR
+ar,Arabic,ar,arb,ar
+be,Russian,ru,rus,ru
+ca,Catalan,ca,cat,-
+cs,Czech,cs,ces,cs
+da,Danish,da,dan,da
+de,German,de,deu,german
+el,Greek,el,ell,-
+en,English (UK),en-GB,eng,en
+es,Spanish,es,spa,es
+fi,Finnish,fi,fin,-
+fr,French,fr,fra,fr
+he,Hebrew,iw,heb,-
+id,Indonesian,id,ind,id
+it,Italian,it,ita,it
+ja,Japanese,ja,jpn,japan
+kk,Kazakh,kk,kaz,-
+ko,Korean,ko,kor,korean
+kr,Korean,ko,kor,korean
+ms,Malay,ms,zsm,ms
+nl,Dutch,nl,nld,nl
+no,Norwegian,no,"nno, nob",no
+pl,Polish,pl,pol,pl
+pt,Portuguese (Brazil),pt-BR,por,pt
+ro,Romanian,ro,ron,ro
+ru,Russian,ru,rus,ru
+se,Swedish,sv,swe,sv
+sv,Swedish,sv,swe,sv
+th,Thai,th,tha,-
+tr,Turkish,tr,tur,tr
+ur,Urdu,ur,urd,ur
+vi,Vietnamese,vi,vie,vi
