@@ -1,0 +1,7 @@
+pimmatching run-entrypoint --entrypoint DataProcessing --client-name 'PepsicoCA_adhoc' --run-date '2023-12-11' 
+pimmatching run-entrypoint --entrypoint SKUMatching --client-name 'PepsicoCA_adhoc' --run-date '2023-12-11'
+
+pimmatching run-entrypoint --entrypoint SKUMatching --client-name 'RoyalCaninUK_Generic' --run-date '2023-12-12' 
+
+pimmatching run-entrypoint --entrypoint SKUMatching --client-name 'PepsicoCA' --run-date '2023-12-21' 
+pimmatching run-entrypoint --entrypoint SKUMatching --client-name 'PepsicoUS' --run-date '2023-12-12' 
