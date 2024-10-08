@@ -1,0 +1,6 @@
+BASE_S3 = 'pim-matching'
+BASE_FOLDER_S3 = 'pim-matching/base-files/'
+PROCESSED_FOLDER_S3 = 'pim-matching/pipeline-runs/'
+BUCKET = 'pim-matching'
+# BUCKET = 'ciq-marketshare'
+REGION = 'us-west-2'
